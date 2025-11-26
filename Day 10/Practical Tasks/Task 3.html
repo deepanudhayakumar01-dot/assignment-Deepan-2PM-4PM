@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    
-</head>
-<body>
-    
-</body>
+    <style>
+      .parent {
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(
+            to right,
+            rgba(125, 174, 243, 0.5),
+            rgba(195, 10, 168, 0.5)
+          ),
+        url("./Images/Lion.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <h1 class="child">Welcome to my page</h1>
+      <p class="child">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda.
+      </p>
+    </div>
+  </body>
 </html>

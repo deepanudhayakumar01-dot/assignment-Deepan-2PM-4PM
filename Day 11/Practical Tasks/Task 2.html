@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        border: 2px solid rgb(239, 147, 147);
+      }
+      .child {
+        border: 2px solid rgb(225, 29, 29);
+        width: 100px;
+        height: 100px;
+        float: right;
+        margin: 10px;
+      }
+      .container::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="child">Image</div>
+      <p></p>
+    </div>
+  </body>
+</html>

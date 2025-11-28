@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            background-color: aquamarine;
+            gap: 10px;
+            padding: 10px;
+            grid-template-areas:
+            " header header header header header header"
+            " left left menu menu menu right "
+            " footer footer footer footer footer footer "
+             ;
+            
+
+        }
+        .container div{
+            background-color: white;
+            text-align: center;
+            color: aquamarine ;
+            padding: 10px;
+            font-size: 34px;
+        }
+        .header{
+            grid-area: header;
+        }
+        .menu{
+            grid-area:menu;
+            
+        }
+        .right{
+            grid-area: right;
+        }
+        .left{
+            grid-area: left;
+        }
+        .footer{
+            grid-area: footer;
+        }
+ 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="menu">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, exercitationem?</div>
+        <div class="right">Right</div>
+        <div class="left">Left</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

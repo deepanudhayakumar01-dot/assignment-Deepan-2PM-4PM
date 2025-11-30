@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Layout</title>
+    <style>
+        h1{
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 100% ;
+        }
+        header{
+            display: flex;
+            width: 500px;
+            gap: 10px;
+            align-items: baseline;
+            border: 2px solid rgb(131, 240, 131);
+            padding: 5px;
+        }
+        main section{
+            display: flex;
+            width: 500px;
+            flex-direction: column-reverse;
+            gap: 10px;
+            border: 2px solid rgb(237, 141, 141);
+            padding: 5px;
+            height: 400px;
+            overflow-y: scroll;
+        }
+        footer{
+            display: flex;
+            width: 500px;
+            gap: 10px;
+            align-items: center;
+            border: 2px solid rgb(131, 240, 131);
+            padding: 5px;
+        }
+        .odd{
+            display: flex;
+            gap: 10px;
+            flex-direction: row;
+            width: fit-content;
+            align-items: flex-start;
+            align-items: baseline;
+            background-color: rgb(220, 220, 220);
+            padding: 5px;
+            border-radius: 10px;
+        }
+        .even{
+            display: flex;
+            flex-direction: row;
+            align-items:stretch;
+            align-self: self-end;
+            width: fit-content;
+            background-color: rgb(173, 216, 230);
+            padding: 5px;
+            border-radius: 10px;
+        }
+        input{
+            flex: 1;
+            padding: 5px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+        }
+        button{
+            padding: 5px 10px;
+            background-color: rgb(242, 141, 97);
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>D</h1>
+        <h2>Deepan</h2>
+    </header>
+    <main>
+        <section>
+            <div class="odd">
+                <h1>s</h1>
+                <p>Lorem, ipsum dolor.</p>
+            </div>
+            <div class="even">
+                <p>Lorem ipsum dolor sit.</p>
+            </div>
+            <div class="odd">
+                <h1>s</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+            <div class="even">
+                <p>Lorem, ipsum dolor.</p>
+            </div>
+            <div class="odd">
+                <h1>s</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <input type="text" placeholder="Type a message...">
+        <button>Send</button>
+    </footer>
+</body>
+</html>

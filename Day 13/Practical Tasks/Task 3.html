@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Grid</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns:repeat(5,1fr);
+            background-color: rgb(142, 224, 235);
+            justify-content: space-around;
+            height: 400px;
+            padding: 20px;
+    
+        }
+        .container box{
+            background-color: rgb(107, 107, 103);
+            width: 200px;
+            height: 250px;
+        }
+        .img{
+            width: 150px;
+            height: 200px;
+        }
+        h3{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h3>products</h3>
+    <div class="container">
+        <div class="box">
+            <img class="img" src="https://m.media-amazon.com/images/I/41zVU61is1L._AC_UL480_QL65_.jpg" alt="">
+            <h5>Samfor </h5>
+            <button class="button">Add to Cart</button>
+
+
+        </div>
+        <div class="box">
+            <img class="img" src="https://m.media-amazon.com/images/I/71kE75JMKjL._AC_UL480_QL65_.jpg" alt="">
+            <h5>Lymio</h5>
+            <button class="button">Add to Cart</button>
+
+        </div>
+        <div class="box">
+            <img class="img" src="https://m.media-amazon.com/images/I/61Lwqw1uUaL._AC_UL480_QL65_.jpg" alt="">
+            <h5>DEELMO</h5>
+            <button class="button">Add to Cart</button>
+        </div>
+
+        <div class="box">
+            <img class="img" src="https://m.media-amazon.com/images/I/71tLmDmDG5L._AC_UL480_QL65_.jpg" alt="">
+            <h5>Cotton King</h5>
+            <button class="button">Add to Cart</button>
+        </div>
+
+        <div class="box">
+            <img class="img" src="https://m.media-amazon.com/images/I/71eUwDk8z+L._AC_UL480_QL65_.jpg" alt="">
+            <h5>Allen Solly</h5>
+            <button class="button">Add to Cart</button>
+        </div>
+    </div>
+</body>
+</html>

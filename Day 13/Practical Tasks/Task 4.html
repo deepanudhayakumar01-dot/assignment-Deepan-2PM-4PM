@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 80px auto;
+            grid-template-areas:
+            "sidebar topbar"
+            "sidebar main";
+            height: 100vh;
+        }
+        .sidebar{
+            grid-area: sidebar;
+            background-color: rgb(7, 7, 67);
+            color: aliceblue;
+            padding: 20px;
+            margin: 20px;
+        }
+        .sidebar ul{
+            list-style: none;
+        }
+        .topbar{
+            grid-area: topbar;
+            padding: 10px;
+            background-color: azure;
+        }
+        .main{
+            grid-area: main;
+            display: grid;
+            grid-template-rows: auto 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+        .stats{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        .content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Dashboard</h2>
+            <ul>
+                <li>Home</li>
+                <li>Reports</li>
+                <li>Analytics</li>
+                <li>Settings</li>
+            </ul>
+        </div>
+
+        <div class="topbar">Navigation</div>
+        <div class="main">
+            <div class="stats">
+                <div class="stats1">Stats 1</div>
+                <div class="stats1">Stats 2</div>
+                <div class="stats1">Stats 3</div>
+                <div class="stats1">Stats 4</div>
+
+            </div>
+
+            <div class="content">
+                <h2>Main Content</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, quidem?</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

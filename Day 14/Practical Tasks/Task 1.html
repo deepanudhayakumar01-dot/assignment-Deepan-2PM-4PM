@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .hero {
+        display: flex;
+        justify-content: space-around;
+        background-color: #000039;
+        padding: 20px;
+      }
+      .hero-div{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        width: fit-content;
+        padding: 20px;
+        color: white;
+      }
+      .hero-div button{
+        padding: 5px;
+        width: 100px;
+        background-color: #810328; 
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px  #450115;
+        border: 1px solid #810328 ;
+        text-align: center;
+        color: white;
+      }
+      .hero-img img{
+        height: 200px;
+        width: 400px;
+        display: flex;
+        object-fit: contain;
+      }
+      @media (max-width : 786px){
+        .hero{
+            flex-direction:column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-div">
+        <h2>Welcome All</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+        <button>Let Start</button>
+      </div>
+
+      <div class="hero-img">
+        <img src="https://4kwallpapers.com/images/walls/thumbs_2t/19518.png" alt="">
+      </div>
+
+    </section>
+  </body>
+</html>

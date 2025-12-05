@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .footer{
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr ;
+            gap: 10px;
+            background-color: rgb(150, 234, 111);
+            padding: 25px;
+        }
+        .about{
+            display: flex;
+            flex-direction: column;
+        }
+        .quick ,.services ,.subscribe{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .quick a{
+            text-decoration: none;
+        }
+        .input{
+            border: 1px solid rgb(150, 234, 111);
+            padding: 15px;
+            
+            border-radius: 25px;
+        }
+        button{
+            padding: 15px;
+            border-radius: 5px;
+            background-color: rgb(3, 207, 3);
+            color: white;
+
+        }
+        @media (max-width : 786px){
+            .footer{
+               grid-template-columns: auto;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <footer class="footer">
+        <div class="about">
+            <h3>About us</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus iste odio repellendus ab animi 
+                aliquam in eligendi, esse facilis atque reprehenderit quam eaque ut laboriosam maiores sequi vero 
+                quos sapiente!
+            </p>
+        </div>
+        <div class="quick">
+            <h3>Quick Links</h3>
+            <a href="">Home</a>
+            <a href="">About us</a>
+            <a href="">Privecy & Policy</a>
+            <a href="">Contact Us</a>
+        </div>
+        <div class="services">
+            <h3>Services</h3>
+           <span>Lorem, ipsum.</span>
+           <span>Lorem, ipsum.</span>
+           <span>Lorem, ipsum.</span>
+           <span>Lorem, ipsum.</span>
+        </div>
+        <div class="subscribe">
+            <h3>Subscribe</h3>
+           <input class="input" type="text" placeholder="Enter your email">
+           <button>Subscribe</button>
+        </div>
+
+    </footer>
+</body>
+</html>

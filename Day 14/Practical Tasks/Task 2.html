@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display:flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+
+        }
+        .box{
+            width: 200px;
+            border: 1px solid rgb(186, 185, 185);
+            border-radius: 15px;
+            padding: 15px;
+        }
+        @media (max-width : 786px) {
+            .container{
+                flex-direction: column;
+
+            }
+            .box{
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;"> service </h1>
+    <div class="container">
+        <div class="box">
+            <h3>Web Development</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit est</p>
+        </div>
+
+        <div class="box">
+            <h3>App Development</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        </div>
+
+        <div class="box">
+            <h3>Web Design</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad maxime</p>
+        </div>
+
+    </div>
+</body>
+</html>

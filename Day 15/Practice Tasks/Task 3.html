@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: rgb(213, 183, 138);
+            border: 1px solid rgb(120, 105, 105);
+            display: grid;
+            gap: 10px;
+            padding: 25px;
+            grid-template-columns: 1fr 1fr;
+        
+        }
+        .box{
+            background-color: rgb(90, 226, 220);
+            border: 1px solid rgb(143, 101, 101);
+            padding: 25px;
+            text-align: center;
+        }
+        @media (max-width : 768px){
+            .container{
+                grid-template-columns: 1fr ;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">column 1</div>
+        <div class="box">column 2</div>
+    </div>
+</body>
+</html>

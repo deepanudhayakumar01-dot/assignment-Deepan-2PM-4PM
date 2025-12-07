@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio</title>
+    <style>
+        html{
+            background-color: #11213a;
+            
+        }
+      :root {
+        --bg: #0f1724;
+        --card: #0b1220;
+        --muted: #94a3b8;
+        --accent: #7c3aed;
+        --glass: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.02),
+          rgba(255, 255, 255, 0.01)
+        );
+      }
+      header{
+        position: sticky;
+        top: 10px;
+      }
+    
+      .navbar {
+        display: flex;
+        gap: 10px;
+        background-color: var(--glass);
+        backdrop-filter:blur(6px);
+        border: 1px solid var(--muted);
+        padding: 10px;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        top: 10px;
+      }
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        color: white;
+      }
+      .logo-s ,.menu-sy{
+        display: flex;
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--accent), #2dd4bf);
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+      }
+      .menu-sy{
+        display: none;
+      }
+      .menu {
+        display: flex;
+        margin-left: auto;
+        gap: 20px;
+      }
+      .menu a {
+        text-decoration: none;
+        color: white;
+      }
+      .hero{
+        background-color: var(--card);
+        height: fit-content;
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: auto auto;
+
+      }
+      .skill{
+        padding: 12px;
+        border-radius: 5px;
+        background-color: rgba(255,255,255,0.02);
+      }
+      .skills{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .main {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 10px;
+        color: white;
+      }
+      .about,.pro-head , .contact{
+        background-color: var(--card);
+        padding: 15px;
+        border-radius: 10px;
+      }
+      .projects{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: auto auto auto;
+      }
+      .pro-type{
+        background-color: #0f1724;
+        padding: 15px;
+        border-radius: 10px;
+      }
+      .contact{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 20px;
+      }
+      .input{
+        padding: 15px;
+        color: var(--card);
+      }
+      .footer{
+        background-color: var(--card);
+        padding: 15px;
+        border-radius: 10px;
+      }
+      body{
+        display: grid;
+        gap: 10px;
+      }
+      @media (max-width : 786px){
+           .hero,.projects,.contact{
+            grid-template-columns: auto;
+           }
+           .menu-sy{
+            margin-left: auto;
+            display: inherit;
+           }
+           .menu{
+            display: none;
+           }
+           
+      }
+    </style>
+  </head>
+  <body >
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <div class="logo-s">
+            <p>DU</p>
+          </div>
+          <div style="line-height: 1">
+            <p style="font-weight: 700">Deepan Udhayakumar</p>
+            <span style="font-size: 12px">Frontend / Java dev</span>
+          </div>
+        </div>
+        <div class="menu-sy">&#9776</div>
+        <div class="menu">
+          <a href="">Home</a>
+          <a href="">About</a>
+          <a href="">project</a>
+          <a href="">Contact</a>
+        </div>
+      </nav>
+
+    </header>
+    <main>
+      <section class="main">
+        <div class="hero">
+        <div >
+            <h1>Hi There I'm Deepan Udhayakumar</h1>
+            <p>
+                Frontend developer with experience in Java and web technologies. I
+                make accessible, performance-focused web apps and simple, maintainable UI.
+            </p>
+        </div>
+        <div >
+          <h2>Skills</h2>
+          <div class="skills">
+             <span class="skill">HTML</span>
+             <span class="skill">CSS</span>
+             <span class="skill">JavaScript</span>
+             <span class="skill">Java</span>
+             <span class="skill">Spring</span>
+          </div>
+        </div>
+      </div>
+
+        <div class="about" >
+          <h2>About me</h2>
+          <p>
+            I am a passionate <strong>Full Stack Developer</strong> with
+            experience in building dynamic and responsive
+            <em>web applications</em>. My expertise includes front-end and
+            back-end development, database management,
+          </p>
+        </div>
+        <div class="pro-head">
+           <h2>Projects</h2>
+           <div class="projects">
+            <div class="pro-type">
+            <h3>Portfolio Website</h3>
+            <p>
+              Responsive portfolio built with semantic HTML and a mobile-first
+              layout. Includes projects, contact form and performance
+              optimizations.
+            </p>
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">Js</span>
+          </div>
+          <div class="pro-type">
+            <h3>Task Manager App</h3>
+            <p>
+              Task CRUD app with authentication, REST API and responsive UI.
+            </p>
+            <span class="skill">React</span>
+            <span class="skill">Node</span>
+          </div>
+          <div class="pro-type">
+            <h3>Spring Boot API</h3>
+            <p>
+              RESTful API for user management with unit tests and Dockerfile for
+              deployment.
+            </p>
+            <span class="skill">Java</span>
+            <span class="skill">Spring</span>
+            <span class="skill">MySQL</span>
+          </div>
+           </div>
+          
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <h3 style="color: white;">Contact</h3>
+      <div class="contact">
+       
+        <input class="input" type="text" placeholder="your Name" />
+        <input class="input" type="email" placeholder="Email" />
+        <textarea class="input" rows="4" placeholder="Message"></textarea>
+      </div>
+    </footer>
+  </body>
+</html>

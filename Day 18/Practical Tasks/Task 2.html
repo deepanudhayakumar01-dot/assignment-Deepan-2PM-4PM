@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="input" placeholder="Enter the Multiplication " />
+    <button onclick="Multiplication()">Multiplication</button>
+    <ol id="output"> Multiplication </ol>
+    <script>
+      function Multiplication() {
+        
+        const number = document.getElementById("input").value;
+        const out=document.getElementById("output");
+        for (let i = 1; i <= 10 ; i++) {
+            let li = document.createElement("li");
+            li.textContent=`${i}*${number}=${i*number}`;
+            out.appendChild(li)
+          }
+      }
+    </script>
+  </body>
+</html>

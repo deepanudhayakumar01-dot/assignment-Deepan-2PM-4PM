@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p id="blod">If clike here it will change Bold tag </p> <br>
+        <p id="Italic">If clike here it will change Italic tag</p>
+    </div>
+    <script>
+        const blod=document.getElementById("blod");
+        const Italic=document.getElementById("Italic");
+
+        const blodnew=document.createElement("b");
+        const Italicnew=document.createElement("i");
+
+        blod.addEventListener("click",()=>{
+            blodnew.textContent=blod.textContent;
+            blod.replaceWith(blodnew)
+        })
+         Italic.addEventListener("click",()=>{
+            Italicnew.textContent=Italic.textContent;
+            Italic.replaceWith(Italicnew)
+        })
+
+    </script>
+    
+</body>
+</html>

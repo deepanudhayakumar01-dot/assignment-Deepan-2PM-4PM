@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 30px;
+      }
+
+      .switch input {
+        display: none;
+      }
+
+      .slider {
+        position: absolute;
+        background: #ccc;
+        border-radius: 30px;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: 0.4s;
+      }
+
+      .slider::before {
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        left: 3px;
+        bottom: 3px;
+        background: white;
+        border-radius: 50%;
+        transition: 0.4s;
+      }
+
+      input:checked + .slider {
+        background: green;
+      }
+
+      input:checked + .slider::before {
+        transform: translateX(30px);
+      }
+    </style>
+  </head>
+  <body id = "body">
+    <label class="switch">
+      <input type="checkbox" onchange="togglePower(this)" />
+      <span class="slider"></span>
+    </label>
+    <p id="status"></p>
+
+    <script>
+      function togglePower(el) {
+       const body= document.getElementById("body");
+       const status=document.getElementById("status");
+       if(status.textContent = el.checked){
+        body.style.backgroundColor="black"
+        body.style.color="white" 
+        status.textContent="Dark Mode"
+       }
+       else{
+        body.style.backgroundColor="white"
+        body.style.color="black"
+        status.textContent="Light Mode"
+       }
+
+      //   document.getElementById("status").textContent = el.checked
+      //     ? body.style.backgroundColor="black"
+      //     : body.style.backgroundColor="white";
+      }
+    </script>
+  </body>
+</html>

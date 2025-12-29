@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 40px;
+    }
+    .todo-box {
+      background: #fff;
+      padding: 20px;
+      max-width: 400px;
+      margin: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #ccc;
+    }
+    #taskInput {
+      width: 70%;
+      padding: 8px;
+    }
+    button {
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+    li {
+      list-style: none;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .left {
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      width: 85%;
+      gap: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="todo-box">
+    <h2> To-Do List</h2>
+
+    <input id="taskInput" placeholder="Enter task">
+    <button onclick="addTask()" class="btn">Add</button>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script>
+    function addTask() {
+      const text = taskInput.value.trim();
+      if (text === "") return;
+
+      const li = document.createElement("li");
+      const left = document.createElement("div");
+      const checkbox = document.createElement("input");
+      const span = document.createElement("span");
+      const delBtn = document.createElement("button");
+
+      // set attributes
+      checkbox.type = "checkbox";
+      span.textContent = text;
+      delBtn.textContent = "❌";
+
+      checkbox.style.margin="0";
+
+      // checkbox action
+      checkbox.addEventListener("change", function () {
+        span.style.textDecoration =
+          this.checked ? "line-through" : "none";
+      });
+
+      // delete using removeChild
+      delBtn.addEventListener("click", function () {
+        taskList.removeChild(li);
+      });
+
+      // build structure
+      left.appendChild(checkbox);
+      left.appendChild(span);
+      left.appendChild(delBtn);
+
+      left.classList.add("left");
+
+      li.appendChild(left);
+      delBtn.style.marginLeft="auto";
+
+      taskList.appendChild(li);
+      taskInput.value = "";
+    }
+  </script>
+
+</body>
+</html>

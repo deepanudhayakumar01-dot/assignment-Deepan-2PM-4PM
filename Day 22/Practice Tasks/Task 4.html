@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="Remove()">Remove</button>
+    <ul id="list">
+      List
+      <ol>
+        one
+      </ol>
+      <ol>
+        Two
+      </ol>
+      <ol>
+        Three
+      </ol>
+    </ul>
+
+    <script>
+      function Remove() {
+        const list = document.getElementById("list");
+        const first = list.firstElementChild;
+        list.removeChild(first);
+      }
+    </script>
+  </body>
+</html>

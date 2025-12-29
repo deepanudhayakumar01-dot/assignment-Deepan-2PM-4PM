@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .todo-box {
+        background: #fff;
+        padding: 20px;
+        max-width: 400px;
+        margin: auto;
+        border-radius: 8px;
+        box-shadow: 0 0 10px #ccc;
+      }
+
+      button {
+        padding: 8px 12px;
+        cursor: pointer;
+        background-color: rgb(21, 107, 164);
+        color: white;
+        border-radius: 8px;
+        border: 1px solid rgb(21, 107, 164);
+      }
+      #Input {
+        width: 70%;
+        padding: 8px;
+        border-radius: 8px;
+        border: 1px solid rgb(252, 153, 153);
+      }
+      #output {
+        padding: 8px;
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr 2fr;
+        gap: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="todo-box">
+      <input id="Input" placeholder="Enter your skil's" />
+      <button onclick="addButton()">Add Skil</button>
+      <div id="output"></div>
+    </div>
+    <script>
+      function addButton() {
+        const text = Input.value.trim();
+        if (text === "") return;
+        const output = document.getElementById("output");
+        const btn = document.createElement("button");
+        btn.textContent = text;
+        btn.className = "";
+        console.log(btn.textContent);
+
+        output.appendChild(btn);
+        btn.addEventListener("mouseover", () => {
+          btn.style.backgroundColor = "white";
+          btn.style.color = " rgb(21, 107, 164)";
+        });
+        btn.addEventListener("mouseout", () => {
+          btn.style.backgroundColor = "rgb(21, 107, 164)";
+          btn.style.color = "white";
+        });
+
+        Input.value = "";
+      }
+    </script>
+  </body>
+</html>

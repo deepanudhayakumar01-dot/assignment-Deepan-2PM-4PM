@@ -29,6 +29,8 @@ class Square extends Shape{
 const c1=new Circle(5);
  
 console.log(c1.area().toFixed(1));
+console.log(c1.name);
+
 const s1=new Square(4);
 console.log(s1.area())
 

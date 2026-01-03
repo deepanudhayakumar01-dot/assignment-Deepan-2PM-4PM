@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #parent {
+        width: 300px;
+        height: 150px;
+        background-color: rgb(232, 232, 136);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #child {
+        width: 200px;
+        height: 100px;
+        background-color: rgb(156, 238, 133);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parent">
+      <p id="child"></p>
+    </div>
+
+    <p id="output"></p>
+
+    <script>
+      const parent = document.getElementById("parent");
+      const child = document.getElementById("child");
+      const output = document.getElementById("output");
+
+      child.addEventListener("click", firstClick, true);
+      parent.addEventListener("click", firstClick1);
+
+      function firstClick(e) {
+        output.innerText= ` you click the "${e.target.tagName}" element`;
+
+      }
+      function firstClick1(e) {
+        output.innerText= ` you click the "${e.target.tagName}" element`;
+      }
+    </script>
+  </body>
+</html>

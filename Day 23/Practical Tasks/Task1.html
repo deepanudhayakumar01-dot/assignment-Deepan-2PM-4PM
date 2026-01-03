@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        background-color: aquamarine;
+        border: 1px solid gray;
+        width: 250px;
+        height: 250px;
+      }
+      .box2 {
+        background-color: goldenrod;
+        border: 1px solid gray;
+        width: 250px;
+        height: 250px;
+      }
+      .box3 {
+        background-color: rgb(112, 205, 25);
+        border: 1px solid gray;
+        width: 250px;
+        height: 250px;
+      }
+      .box4 {
+        background-color: rgb(146, 21, 177);
+        border: 1px solid gray;
+        width: 250px;
+        height: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box" class="box1">Box</div>
+
+    <script>
+      const box = document.getElementById("box");
+      box.addEventListener("click",e =>{
+        box.className="box2"
+      })
+      box.addEventListener("dblclick",e =>{
+        box.className="box3"
+      })
+      box.addEventListener("mouseover",e =>{
+        box.className="box4"
+      })
+      box.addEventListener("mouseout",e =>{
+        box.className="box1"
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="handclick()" id="on">click</button>
+
+    <script>
+      function handclick() {
+        console.log("error1");
+        const btn = document.getElementById("on");
+        btn.addEventListener("click", () => {
+          alert("Hey button has been cilcked");
+        });
+        console.log("error");
+      }
+    </script>
+  </body>
+</html>

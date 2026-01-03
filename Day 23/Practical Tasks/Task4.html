@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="myForm">
+      <label>Name:</label><br />
+      <input type="text" id="name" />
+      <span id="nameError" style="color: red"></span><br /><br />
+
+      <label>Email:</label><br />
+      <input type="email" id="email" />
+      <span id="emailError" style="color: red"></span><br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      const form = document.getElementById("myForm");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // stop page refresh
+
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+
+        // Clear old errors
+        document.getElementById("nameError").textContent = "";
+        document.getElementById("emailError").textContent = "";
+
+        let isValid = true;
+
+        if (name.value.trim() === "") {
+          document.getElementById("nameError").textContent = "Name is required";
+          isValid = false;
+        }
+
+        if (email.value.trim() === "") {
+          document.getElementById("emailError").textContent =
+            "Email is required";
+          isValid = false;
+        }
+
+        if (isValid) {
+             name.value="";
+             email.value="";
+           alert("Form submitted successfully!");
+        }
+      });
+    </script>
+  </body>
+</html>

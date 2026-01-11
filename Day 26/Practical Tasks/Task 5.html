@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="login-box">
+      <h3>Login</h3>
+      <form id="loginForm">
+        <input type="text" id="username" placeholder="Username" />
+        <input type="password" id="password" placeholder="Password" />
+        <button type="submit">Login</button>
+      </form>
+      <p id="message"></p>
+    </div>
+
+    <script>
+      const form = document.getElementById("loginForm");
+      const message = document.getElementById("message");
+
+      function fakeLoginAPI(username, password) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (username === "admin" && password === "1234") {
+              resolve("Login successful 🎉");
+            } else {
+              reject("Invalid username or password ❌");
+            }
+          }, 2000);
+        });
+      }
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const username = document.getElementById("username").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        message.textContent = "Logging in...";
+        message.className = "";
+
+        try {
+          if (!username || !password) {
+            throw new Error("All fields are required");
+          }
+
+          const result = await fakeLoginAPI(username, password);
+          message.textContent = result;
+          message.className = "success";
+        } catch (error) {
+          message.textContent = error;
+          message.className = "error";
+        }
+      });
+    </script>
+  </body>
+</html>

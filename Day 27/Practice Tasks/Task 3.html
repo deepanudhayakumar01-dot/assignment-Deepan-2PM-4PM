@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Stored User</h2>
+    <p id="result"></p>
+    <script>
+      // Runs automatically when page reloads
+      window.onload = function () {
+        const savedName = localStorage.getItem("userName");
+
+        if (savedName) {
+          document.getElementById(
+            "result"
+          ).textContent = `Welcome back, ${savedName}!`;
+        } else {
+          document.getElementById("result").textContent = "No user data found";
+        }
+      };
+    </script>
+  </body>
+</html>

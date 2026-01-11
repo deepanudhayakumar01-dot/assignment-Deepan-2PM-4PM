@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .input,
+      .btn {
+        border: 2px solid #9b9bef;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .errorInput {
+        border: 2px solid #f70202;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .subInput {
+        border: 2px solid #04e927;
+        padding: 10px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input type="text" id="name" placeholder="Enter name" class="input" />
+      <input type="email" id="email" placeholder="Enter email" class="input" />
+      <button type="button" onclick="validateForm()" class="btn">Submit</button>
+    </form>
+
+    <p id="msg"></p>
+
+    <script>
+      function validateForm() {
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const msg = document.getElementById("msg");
+
+        // reset styles
+        name.className = "input";
+        email.className = "input";
+        name.placeholder = "Enter name";
+        email.placeholder = "Enter email";
+
+        try {
+          if (name.value.trim() === "") {
+            name.className = "errorInput";
+            name.placeholder = "Name is required";
+            throw new Error("Name error");
+          } else {
+            name.className = "subInput";
+           
+          }
+
+          if (email.value.trim() === "") {
+            email.className = "errorInput";
+            email.placeholder = "Email is required";
+            throw new Error("Email error");
+          } else {
+            email.className = "subInput";
+          }
+
+          // success
+            msg.style.color = "green";
+            msg.textContent = "Form submitted successfully!";
+        } catch (e) {
+          msg.style.color = "red";
+          msg.textContent = e.message;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .outer{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 50px;
+        }
+        .inner{
+            background-color: gray;
+            border: 1px solid gray;
+            border-radius: 25px;
+            padding: 10px;
+           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="inner">
+        <h1>1.Define an error in JavaScript</h1>
+        <p>
+          An error in JavaScript is an unexpected condition or mistake in the
+          code that stops normal execution and may cause the program to crash or
+          behave incorrectly.
+        </p>
+      </div>
+      <div class="inner">
+        <h1>2.List types of JavaScript errors</h1>
+        <ol>
+          <li>Syntax Error</li>
+          <li>Reference Error</li>
+          <li>Type Error</li>
+          <li>Range Error</li>
+          <li>URI Error</li>
+          <li>Eval Error</li>
+        </ol>
+      </div>
+      <div class="inner">
+        <h1>3.Difference between runtime and logical error</h1>
+        <p>
+          Runtime Error: An error that occurs while the program is running and
+          stops execution. <br />
+          Logical Error: An error in program logic that produces incorrect
+          output without stopping execution.
+        </p>
+      </div>
+      <div class="inner">
+        <h1>4.Explain try/catch/finally</h1>
+        <p>
+          try: Used to write the code that might cause an error. <br>
+          catch :Used to handle the error if something goes wrong in try. <br>
+          finally : Used to write code that always runs, whether an error occurs or not. <br>
+        </p>
+      </div>
+      <div class="inner">
+        <h1>5.What is the use of throw?</h1>
+        <p>throw is used to generate a custom error intentionally when a specific condition is met.</p>
+      </div>
+    </div>
+  </body>
+</html>
